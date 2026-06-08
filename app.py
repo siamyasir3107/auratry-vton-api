@@ -4,11 +4,9 @@ import os
 
 app = Flask(__name__)
 
-# ১. এখানে "TOKEN" পরিবর্তন করে "HF_TOKEN" করা হয়েছে
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 try:
-    # ২. এখানে hf_token= পরিবর্তন করে token= করা হয়েছে
     client = Client("yisol/IDM-VTON", token=HF_TOKEN)
 except Exception as e:
     print(f"Error: {e}")
